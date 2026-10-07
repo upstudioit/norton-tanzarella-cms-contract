@@ -4555,7 +4555,7 @@ var teamContentSchema = external_exports.object({
   title: external_exports.string().max(80).optional().describe("Titolo sezione"),
   name: external_exports.string().max(80).describe("Nome"),
   role: external_exports.string().max(80).describe("Ruolo"),
-  bio: external_exports.string().max(500).describe("Biografia"),
+  bio: external_exports.string().max(1500).describe("Biografia"),
   mediaId: optionalMediaIdSchema.describe("Foto")
 });
 var statsContentSchema = external_exports.object({

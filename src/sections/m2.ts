@@ -65,7 +65,7 @@ export const teamContentSchema = z.object({
   title: z.string().max(80).optional().describe('Titolo sezione'),
   name: z.string().max(80).describe('Nome'),
   role: z.string().max(80).describe('Ruolo'),
-  bio: z.string().max(500).describe('Biografia'),
+  bio: z.string().max(1500).describe('Biografia'),
   mediaId: optionalMediaIdSchema.describe('Foto'),
 })
 

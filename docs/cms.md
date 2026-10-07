@@ -93,6 +93,7 @@ Defaults: hero → slideshow → stickySplits → team → cta → faq (IT|EN).
 - `stickySplits`: `items[1–12]` (ex N× `split`); `hero.subtitle` max 600
 - **v0.30.7:** rimossa sezione `stats` (refuso); `hero.videoMediaId` resta nello schema ma è **solo homepage** (BO lo nasconde su Chi siamo)
 - Immagini shared (`mediaId`) su slideshow / stickySplits / team; upload folder `cms/chi-siamo/`
+- **v0.36.0:** `team.bio` max **1500** (ex 500)
 
 ## `virtual-tours` (v0.26.0)
 
