@@ -6875,7 +6875,7 @@ var PAGE_REGISTRY = {
           order: 0,
           content: {
             title: "Virtual Tours",
-            lead: "Explore trulli, masserie and character homes across the Valle d'Itria through our video tours \u2014 an authentic first glimpse of each property, before you travel."
+            lead: "Explore charming homes and exclusive residences through our video tours. An authentic first glimpse of each space, before you travel."
           }
         },
         {
@@ -6905,7 +6905,7 @@ var PAGE_REGISTRY = {
           order: 0,
           content: {
             title: "Tour virtuali",
-            lead: "Attraversate trulli, masserie e case di charme in Valle d'Itria con i nostri tour video \u2014 un primo incontro autentico con ogni spazio, prima del vostro viaggio."
+            lead: "Esplorate dimore di charme e residenze esclusive con i nostri tour video. Un primo incontro autentico con ogni spazio, prima del vostro viaggio."
           }
         },
         {
