@@ -4454,7 +4454,8 @@ var heroContentSchema = external_exports.object({
   title: external_exports.string().max(80).describe("Titolo"),
   subtitle: external_exports.string().max(600).optional().describe("Sottotitolo"),
   cta: optionalCtaLinkSchema.describe("CTA"),
-  videoMediaId: optionalMediaIdSchema.describe("Video sfondo")
+  videoMediaId: optionalMediaIdSchema.describe("Video sfondo"),
+  posterMediaId: optionalMediaIdSchema.describe("Poster video (fallback)")
 });
 var featuresContentSchema = external_exports.object({
   eyebrow: external_exports.string().max(40).optional().describe("Sopratitolo"),

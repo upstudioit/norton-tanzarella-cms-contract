@@ -6,6 +6,7 @@ export const heroContentSchema = z.object({
   subtitle: z.string().max(600).optional().describe('Sottotitolo'),
   cta: optionalCtaLinkSchema.describe('CTA'),
   videoMediaId: optionalMediaIdSchema.describe('Video sfondo'),
+  posterMediaId: optionalMediaIdSchema.describe('Poster video (fallback)'),
 })
 
 export const featuresContentSchema = z.object({

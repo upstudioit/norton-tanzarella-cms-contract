@@ -1002,6 +1002,7 @@ declare const heroContentSchema: z.ZodObject<{
         to: string;
     } | undefined, unknown>;
     videoMediaId: z.ZodEffects<z.ZodOptional<z.ZodString>, string | undefined, unknown>;
+    posterMediaId: z.ZodEffects<z.ZodOptional<z.ZodString>, string | undefined, unknown>;
 }, "strip", z.ZodTypeAny, {
     title: string;
     subtitle?: string | undefined;
@@ -1010,11 +1011,13 @@ declare const heroContentSchema: z.ZodObject<{
         to: string;
     } | undefined;
     videoMediaId?: string | undefined;
+    posterMediaId?: string | undefined;
 }, {
     title: string;
     subtitle?: string | undefined;
     cta?: unknown;
     videoMediaId?: unknown;
+    posterMediaId?: unknown;
 }>;
 declare const featuresContentSchema: z.ZodObject<{
     eyebrow: z.ZodOptional<z.ZodString>;
@@ -2003,6 +2006,7 @@ declare const sectionContentByType: {
             to: string;
         } | undefined, unknown>;
         videoMediaId: zod.ZodEffects<zod.ZodOptional<zod.ZodString>, string | undefined, unknown>;
+        posterMediaId: zod.ZodEffects<zod.ZodOptional<zod.ZodString>, string | undefined, unknown>;
     }, "strip", zod.ZodTypeAny, {
         title: string;
         subtitle?: string | undefined;
@@ -2011,11 +2015,13 @@ declare const sectionContentByType: {
             to: string;
         } | undefined;
         videoMediaId?: string | undefined;
+        posterMediaId?: string | undefined;
     }, {
         title: string;
         subtitle?: string | undefined;
         cta?: unknown;
         videoMediaId?: unknown;
+        posterMediaId?: unknown;
     }>;
     readonly features: zod.ZodObject<{
         eyebrow: zod.ZodOptional<zod.ZodString>;
@@ -2745,6 +2751,7 @@ declare function parseSectionContent(type: string, content: unknown): {
             to: string;
         } | undefined;
         videoMediaId?: string | undefined;
+        posterMediaId?: string | undefined;
     } | {
         items: {
             title: string;
