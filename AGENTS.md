@@ -10,7 +10,7 @@ Solo la parte di questo repo. Il metodo sta nelle regole globali del kit; il pro
 - Build: `pnpm build` (`pnpm install` lancia `prepare`, che usa il `dist` già pronto e lancia tsup solo se manca)
 - Test: `pnpm test`, `pnpm typecheck`
 - Ramo base delle PR: `main`
-- Rilascio: nuova `version` in `package.json`, tag `v0.x.x`, poi il pin `github:antoniop88/norton-tanzarella-cms-contract#v0.x.x` aggiornato in backend, web e backoffice. Un cambio incompatibile va anche nel changelog della spec e nei `docs/cms.md` dei tre consumer.
+- Rilascio: nuova `version` in `package.json`, tag `v0.x.x`, poi il pin `github:antoniop88/norton-tanzarella-cms-contract#v0.x.x` aggiornato in backend, web e backoffice. Il repo ora è `upstudioit/norton-tanzarella-cms-contract`: il vecchio nome nei pin funziona grazie al rimando di GitHub. Un cambio incompatibile va anche nel changelog della spec e nei `docs/cms.md` dei tre consumer.
 
 ## Zona critica
 
