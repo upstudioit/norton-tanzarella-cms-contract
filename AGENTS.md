@@ -1,30 +1,31 @@
-# AGENTS.md — cms-contract
+# norton-tanzarella-cms-contract
 
-## Ruolo
+Contratto unico del CMS Norton Tanzarella: schemi Zod, registry delle pagine fisse, `zodToFieldMeta` per il backoffice. Lo importano backend, web e backoffice.
 
-Source of truth Zod per pagine CMS, registry pagine fisse, `zodToFieldMeta` per il backoffice.
+Solo la parte di questo repo. Il metodo sta nelle regole globali del kit; il progetto nella casa, `upstudioit/norton-tanzarella-docs`.
 
-## Documentazione
+## Stack e comandi
 
-- [docs/cms.md](docs/cms.md) — estratto requisiti per questo repo
-- Workspace: `../../docs/cms-requirements.md` (se aperto come workspace)
+- Stack: TypeScript, Zod, tsup, Vitest. pnpm.
+- Build: `pnpm build` (`pnpm install` lancia `prepare`, che usa il `dist` già pronto e lancia tsup solo se manca)
+- Test: `pnpm test`, `pnpm typecheck`
+- Ramo base delle PR: `main`
+- Rilascio: nuova `version` in `package.json`, tag `v0.x.x`, poi il pin `github:antoniop88/norton-tanzarella-cms-contract#v0.x.x` aggiornato in backend, web e backoffice. Un cambio incompatibile va anche nel changelog della spec e nei `docs/cms.md` dei tre consumer.
 
-## Comandi
+## Zona critica
 
-```bash
-pnpm install   # esegue prepare → tsup
-pnpm build
-pnpm typecheck
-pnpm test
-```
+Il lavoro che tocca queste parti segue le regole della zona critica, anche senza etichetta:
 
-## Release
+- `src/`: ogni schema e il registry. Un cambio incompatibile rompe tre consumer.
+- `.github/workflows/`
 
-1. Bump `version` in `package.json`
-2. Tag git `v0.x.x`
-3. Aggiornare pin nei consumer: `file:../norton-tanzarella-cms-contract` (dev) o `github:org/repo#v0.x.x` (CI/prod)
-4. Ogni breaking change su schemi → changelog + aggiornare estratti `docs/cms.md` nei tre consumer
+## Issue, spec e ADR
 
-## Milestone corrente
+La riga `- Issue:` la legge uno script del kit: `owner/repo` tra apici inversi, niente altro sulla riga (un punto finale è accettato).
 
-**M1 homepage:** sezioni `hero`, `statement`, `categoryGrid`, `features`, `featuredCollection`, `cta`.
+- Issue: `upstudioit/norton-tanzarella-docs`
+- Project: nessuno
+- Spec: `docs/` in `upstudioit/norton-tanzarella-docs` (estratto per questo repo in [docs/cms.md](docs/cms.md))
+- ADR: `adr/` in `upstudioit/norton-tanzarella-docs`
+
+Vincoli del cliente, server e rilascio: nell'`AGENTS.md` di `norton-tanzarella-docs`.
